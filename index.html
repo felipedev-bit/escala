@@ -472,12 +472,9 @@
 
       // Se o banco estiver totalmente vazio, insere registros padrão
       if (EMPLOYEES.length === 0) {
-        db.run(`
+       db.run(`
           INSERT INTO employees (name, daily_hours, off_days) VALUES 
-          ('Monique', 8, '5,6'),
-          ('Maxsuel', 8, '0,3'),
-          ('Matheus', 8, '0,2'),
-          ('Felipe', 8, '1,6');
+          ('Felipe', 9, '1,6');
         `);
         saveDbToLocalStorage();
         loadEmployees();
